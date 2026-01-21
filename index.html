@@ -184,7 +184,7 @@
             <h2 class="section-title hypotheses-title">ГИПОТЕЗЫ</h2>
             
             <!-- Hypothesis 1 -->
-            <div class="hypothesis-card" data-hypothesis="1" onclick="updateHADI(1)">
+            <div class="hypothesis-card">
                 <div class="hypothesis-header">
                     <span class="hypothesis-number">1</span>
                     <h3>Снижение конверсии связано с изменением структуры входящего трафика и холодным исследовательским спросом в сентябре</h3>
@@ -233,7 +233,7 @@
                         <p>Задача - понять, какие лиды можно конвертировать сразу, а какие требуют времени, 
                         и перестроить воронку под эту реальность.</p>
                     </div>
-                    <div class="rice-score" onclick="toggleRiceTable(1, event)">
+                    <div class="rice-score" onclick="toggleRiceTable(1)">
                         <span class="rice-label">RICE =</span>
                         <span class="rice-value">21.6</span>
                         <span class="rice-formula">(9 × 8 × 0.9) / 3</span>
@@ -280,7 +280,7 @@
             </div>
 
             <!-- Hypothesis 2 -->
-            <div class="hypothesis-card" data-hypothesis="2" onclick="updateHADI(2)">
+            <div class="hypothesis-card">
                 <div class="hypothesis-header">
                     <span class="hypothesis-number">2</span>
                     <h3>Невозможно конвертировать в покупку, если пользователю мешает бот / плохая коммуникация</h3>
@@ -324,7 +324,7 @@
                         никакой рост трафика не спасет конверсию. Даже холодные лиды можно прогреть и довести до оплаты, 
                         но пока мы этого не делаем (раз конверсия падает).</p>
                     </div>
-                    <div class="rice-score" onclick="toggleRiceTable(2, event)">
+                    <div class="rice-score" onclick="toggleRiceTable(2)">
                         <span class="rice-label">RICE =</span>
                         <span class="rice-value">8.82</span>
                         <span class="rice-formula">(7 × 9 × 0.7) / 5</span>
@@ -371,7 +371,7 @@
             </div>
 
             <!-- Hypothesis 3 -->
-            <div class="hypothesis-card" data-hypothesis="3" onclick="updateHADI(3)">
+            <div class="hypothesis-card">
                 <div class="hypothesis-header">
                     <span class="hypothesis-number">3</span>
                     <h3>Внутреннее сравнение тарифов и эффект «колеблющегося пользователя»</h3>
@@ -419,7 +419,7 @@
                         Этот эффект стоит рассматривать как управляемый: через визуализацию, прогрев и грамотное сопровождение, 
                         мы можем сократить цикл принятия решения и вернуть конверсию.</p>
                     </div>
-                    <div class="rice-score" onclick="toggleRiceTable(3, event)">
+                    <div class="rice-score" onclick="toggleRiceTable(3)">
                         <span class="rice-label">RICE =</span>
                         <span class="rice-value">5.4</span>
                         <span class="rice-formula">(6 × 6 × 0.6) / 4</span>
@@ -810,96 +810,6 @@
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- HADI Cycles Section -->
-    <section class="hadi-section">
-        <div class="container">
-            <h2 class="section-title">Циклы HADI</h2>
-            <p class="section-intro">Методология быстрого тестирования гипотез для улучшения конверсии</p>
-            
-            <div class="hadi-explanation">
-                <div class="hadi-cycle-visual">
-                    <div class="hadi-step hadi-h">
-                        <div class="hadi-icon">H</div>
-                        <div class="hadi-label">Hypothesis</div>
-                        <div class="hadi-desc" id="hadi-hypothesis">Выберите гипотезу выше</div>
-                    </div>
-                    <div class="hadi-arrow">→</div>
-                    <div class="hadi-step hadi-a">
-                        <div class="hadi-icon">A</div>
-                        <div class="hadi-label">Action</div>
-                        <div class="hadi-desc" id="hadi-action">—</div>
-                    </div>
-                    <div class="hadi-arrow">→</div>
-                    <div class="hadi-step hadi-d">
-                        <div class="hadi-icon">D</div>
-                        <div class="hadi-label">Data</div>
-                        <div class="hadi-desc" id="hadi-data">—</div>
-                    </div>
-                    <div class="hadi-arrow">→</div>
-                    <div class="hadi-step hadi-i">
-                        <div class="hadi-icon">I</div>
-                        <div class="hadi-label">Impact</div>
-                        <div class="hadi-desc" id="hadi-impact">—</div>
-                    </div>
-                    <div class="hadi-arrow-cycle">↻</div>
-                </div>
-
-                <div class="hadi-factors">
-                    <div class="hadi-factor-card">
-                        <div class="factor-icon">💡</div>
-                        <h3>Вера в эффект</h3>
-                        <p>Насколько мы уверены, что гипотеза приведет к желаемому результату. Высокая вера = быстрее принимаем решение о реализации.</p>
-                        <div class="factor-scale">
-                            <div class="scale-item">Низкая</div>
-                            <div class="scale-bar">
-                                <div class="scale-fill" id="confidence-scale" style="width: 0%"></div>
-                            </div>
-                            <div class="scale-item">Высокая</div>
-                        </div>
-                        <div class="scale-value" id="confidence-value">—</div>
-                    </div>
-                    <div class="hadi-factor-card">
-                        <div class="factor-icon">⚙️</div>
-                        <h3>Сложность реализации</h3>
-                        <p>Оценка ресурсов, времени и усилий для проверки гипотезы. Низкая сложность = можно проверить быстро и с минимальными затратами.</p>
-                        <div class="factor-scale">
-                            <div class="scale-item">Простая</div>
-                            <div class="scale-bar">
-                                <div class="scale-fill" id="effort-scale" style="width: 0%"></div>
-                            </div>
-                            <div class="scale-item">Сложная</div>
-                        </div>
-                        <div class="scale-value" id="effort-value">—</div>
-                    </div>
-                </div>
-
-                <div class="hadi-principles">
-                    <div class="principle-item">
-                        <div class="principle-number">1</div>
-                        <div class="principle-content">
-                            <h4>Быстрые итерации</h4>
-                            <p>Каждый цикл HADI должен быть коротким (1-2 недели), чтобы быстро получать обратную связь и корректировать подход.</p>
-                        </div>
-                    </div>
-                    <div class="principle-item">
-                        <div class="principle-number">2</div>
-                        <div class="principle-content">
-                            <h4>Измеримые метрики</h4>
-                            <p>Каждая гипотеза должна иметь четкие метрики успеха, которые можно измерить до и после действия.</p>
-                        </div>
-                    </div>
-                    <div class="principle-item">
-                        <div class="principle-number">3</div>
-                        <div class="principle-content">
-                            <h4>Приоритизация</h4>
-                            <p>Начинаем с гипотез с высокой верой в эффект и низкой сложностью реализации для быстрых побед.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
