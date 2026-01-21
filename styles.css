@@ -724,31 +724,18 @@ body {
 }
 
 .hypothesis-card {
-    background: linear-gradient(135deg, #fff 0%, #fff5e6 100%);
+    background: #fff;
     border: 2px solid #ff8c00;
-    border-radius: 16px;
-    padding: 35px;
-    margin-bottom: 35px;
-    box-shadow: 0 6px 25px rgba(255, 140, 0, 0.15);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.hypothesis-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #ff8c00 0%, #ff6b00 100%);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .hypothesis-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 35px rgba(255, 140, 0, 0.25);
-    border-color: #ff6b00;
+    box-shadow: 0 8px 25px rgba(255, 140, 0, 0.2);
 }
 
 .hypothesis-header {
@@ -823,30 +810,17 @@ body {
 .hypothesis-problem,
 .hypothesis-solutions {
     margin: 25px 0;
-    padding: 22px;
-    background: linear-gradient(135deg, #fff 0%, #f9f9f9 100%);
-    border-radius: 12px;
-    border-left: 4px solid #ff8c00;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-}
-
-.hypothesis-check:hover,
-.hypothesis-problem:hover,
-.hypothesis-solutions:hover {
-    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.15);
-    transform: translateX(5px);
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
 }
 
 .hypothesis-check h4,
 .hypothesis-problem h4,
 .hypothesis-solutions h4 {
     color: #ff8c00;
-    font-size: 20px;
-    margin-bottom: 18px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
+    font-size: 18px;
+    margin-bottom: 15px;
 }
 
 .hypothesis-check ul,
@@ -859,20 +833,11 @@ body {
 .hypothesis-check li,
 .hypothesis-problem li,
 .hypothesis-solutions li {
-    padding: 10px 0;
-    padding-left: 35px;
+    padding: 8px 0;
+    padding-left: 25px;
     position: relative;
     font-size: 15px;
     color: #555;
-    line-height: 1.7;
-    transition: all 0.2s ease;
-}
-
-.hypothesis-check li:hover,
-.hypothesis-problem li:hover,
-.hypothesis-solutions li:hover {
-    color: #333;
-    transform: translateX(3px);
 }
 
 .hypothesis-check li::before,
@@ -883,14 +848,6 @@ body {
     left: 0;
     color: #ff8c00;
     font-weight: bold;
-    font-size: 18px;
-    transition: transform 0.2s ease;
-}
-
-.hypothesis-check li:hover::before,
-.hypothesis-problem li:hover::before,
-.hypothesis-solutions li:hover::before {
-    transform: translateX(3px);
 }
 
 .solutions-grid {
@@ -920,23 +877,11 @@ body {
 }
 
 .hypothesis-conclusion-box {
-    background: linear-gradient(135deg, #fff5e6 0%, #ffe4b5 100%);
-    border-left: 5px solid #ff8c00;
-    padding: 25px;
-    border-radius: 12px;
-    margin: 30px 0;
-    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.15);
-    position: relative;
-    overflow: hidden;
-}
-
-.hypothesis-conclusion-box::before {
-    content: '💡';
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 32px;
-    opacity: 0.3;
+    background: #fff5e6;
+    border-left: 4px solid #ff8c00;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 25px 0;
 }
 
 .hypothesis-conclusion-box p {
