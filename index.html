@@ -184,7 +184,7 @@
             <h2 class="section-title hypotheses-title">ГИПОТЕЗЫ</h2>
             
             <!-- Hypothesis 1 -->
-            <div class="hypothesis-card">
+            <div class="hypothesis-card" data-hypothesis="1" onclick="updateHADI(1)">
                 <div class="hypothesis-header">
                     <span class="hypothesis-number">1</span>
                     <h3>Снижение конверсии связано с изменением структуры входящего трафика и холодным исследовательским спросом в сентябре</h3>
@@ -280,7 +280,7 @@
             </div>
 
             <!-- Hypothesis 2 -->
-            <div class="hypothesis-card">
+            <div class="hypothesis-card" data-hypothesis="2" onclick="updateHADI(2)">
                 <div class="hypothesis-header">
                     <span class="hypothesis-number">2</span>
                     <h3>Невозможно конвертировать в покупку, если пользователю мешает бот / плохая коммуникация</h3>
@@ -371,7 +371,7 @@
             </div>
 
             <!-- Hypothesis 3 -->
-            <div class="hypothesis-card">
+            <div class="hypothesis-card" data-hypothesis="3" onclick="updateHADI(3)">
                 <div class="hypothesis-header">
                     <span class="hypothesis-number">3</span>
                     <h3>Внутреннее сравнение тарифов и эффект «колеблющегося пользователя»</h3>
@@ -825,25 +825,25 @@
                     <div class="hadi-step hadi-h">
                         <div class="hadi-icon">H</div>
                         <div class="hadi-label">Hypothesis</div>
-                        <div class="hadi-desc">Гипотеза</div>
+                        <div class="hadi-desc" id="hadi-hypothesis">Выберите гипотезу выше</div>
                     </div>
                     <div class="hadi-arrow">→</div>
                     <div class="hadi-step hadi-a">
                         <div class="hadi-icon">A</div>
                         <div class="hadi-label">Action</div>
-                        <div class="hadi-desc">Действие</div>
+                        <div class="hadi-desc" id="hadi-action">—</div>
                     </div>
                     <div class="hadi-arrow">→</div>
                     <div class="hadi-step hadi-d">
                         <div class="hadi-icon">D</div>
                         <div class="hadi-label">Data</div>
-                        <div class="hadi-desc">Метрика / Дата</div>
+                        <div class="hadi-desc" id="hadi-data">—</div>
                     </div>
                     <div class="hadi-arrow">→</div>
                     <div class="hadi-step hadi-i">
                         <div class="hadi-icon">I</div>
                         <div class="hadi-label">Impact</div>
-                        <div class="hadi-desc">Ожидаемый эффект</div>
+                        <div class="hadi-desc" id="hadi-impact">—</div>
                     </div>
                     <div class="hadi-arrow-cycle">↻</div>
                 </div>
@@ -856,10 +856,11 @@
                         <div class="factor-scale">
                             <div class="scale-item">Низкая</div>
                             <div class="scale-bar">
-                                <div class="scale-fill" style="width: 0%"></div>
+                                <div class="scale-fill" id="confidence-scale" style="width: 0%"></div>
                             </div>
                             <div class="scale-item">Высокая</div>
                         </div>
+                        <div class="scale-value" id="confidence-value">—</div>
                     </div>
                     <div class="hadi-factor-card">
                         <div class="factor-icon">⚙️</div>
@@ -868,10 +869,11 @@
                         <div class="factor-scale">
                             <div class="scale-item">Простая</div>
                             <div class="scale-bar">
-                                <div class="scale-fill" style="width: 0%"></div>
+                                <div class="scale-fill" id="effort-scale" style="width: 0%"></div>
                             </div>
                             <div class="scale-item">Сложная</div>
                         </div>
+                        <div class="scale-value" id="effort-value">—</div>
                     </div>
                 </div>
 

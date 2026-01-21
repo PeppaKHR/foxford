@@ -1713,6 +1713,10 @@ body {
     font-size: 14px;
     color: #666;
     text-align: center;
+    min-height: 40px;
+    line-height: 1.4;
+    white-space: pre-line;
+    padding: 5px;
 }
 
 .hadi-arrow {
@@ -1801,6 +1805,14 @@ body {
     background: linear-gradient(90deg, #ff8c00 0%, #ff6b00 100%);
     border-radius: 4px;
     transition: width 0.5s ease;
+}
+
+.scale-value {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ff8c00;
+    font-weight: 600;
+    text-align: center;
 }
 
 .hadi-principles {
