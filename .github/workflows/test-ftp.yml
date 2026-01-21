@@ -1,0 +1,43 @@
+name: Test FTP Connection
+
+on:
+  workflow_dispatch:
+    inputs:
+      username_format:
+        description: 'Username format'
+        required: true
+        default: 'u3353778'
+        type: choice
+        options:
+        - 'u3353778'
+        - 'u3353778@pkhromova.online'
+        - '3353778'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Test FTP Connection
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: pkhromova.online
+        username: ${{ github.event.inputs.username_format }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: /www/pkhromova.online/
+        local-dir: ./
+        protocol: ftp
+        port: 21
+        dry-run: true
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.DS_Store
+          **/.idea/**
+          **/*.docx
+          **/.github/**
+
