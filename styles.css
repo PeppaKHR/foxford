@@ -9,6 +9,9 @@ body {
     color: #333;
     line-height: 1.6;
     background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 .container {
@@ -1739,6 +1742,20 @@ body {
 
     .metrics-table th {
         font-size: 11px;
+    }
+
+    .metrics-table-container {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .dashboard-screenshot img,
+    .visualization-image img {
+        width: 100%;
     }
 
     .tooltip-content {
