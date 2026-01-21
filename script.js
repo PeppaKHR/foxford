@@ -63,6 +63,22 @@ document.addEventListener('DOMContentLoaded', function() {
             item.style.transform = 'translateX(0)';
         }, index * 100);
     });
+
+    // Interactive tools
+    const toolItems = document.querySelectorAll('.interactive-tool');
+    toolItems.forEach(tool => {
+        tool.addEventListener('click', function() {
+            const isActive = this.classList.contains('active');
+            
+            // Close all tools
+            toolItems.forEach(t => t.classList.remove('active'));
+            
+            // Open clicked tool if it wasn't active
+            if (!isActive) {
+                this.classList.add('active');
+            }
+        });
+    });
 });
 
 // Toggle RICE table
