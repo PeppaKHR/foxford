@@ -66,7 +66,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Toggle RICE table
-function toggleRiceTable(hypothesisNumber) {
+function toggleRiceTable(hypothesisNumber, event) {
+    if (event) {
+        event.stopPropagation(); // Prevent triggering updateHADI
+    }
+    
     const riceScore = document.querySelectorAll('.rice-score')[hypothesisNumber - 1];
     const riceTable = document.getElementById(`rice-table-${hypothesisNumber}`);
     
