@@ -23,6 +23,8 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: /www/pkhromova.online/
         local-dir: ./
+        protocol: ftp
+        port: 21
         dangerous-clean-slate: false
         exclude: |
           **/.git*
