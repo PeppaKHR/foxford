@@ -21,8 +21,9 @@ jobs:
         server: pkhromova.online
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./
         server-dir: /www/pkhromova.online/
+        local-dir: ./
+        dangerous-clean-slate: false
         exclude: |
           **/.git*
           **/.git*/**
@@ -31,4 +32,5 @@ jobs:
           **/.idea/**
           **/*.docx
           **/.github/**
+          **/DEPLOY.md
 
