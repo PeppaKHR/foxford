@@ -724,16 +724,31 @@ body {
 }
 
 .hypothesis-card {
-    background: #fff;
+    background: linear-gradient(135deg, #fff 0%, #fff5e6 100%);
+    border: 2px solid #ff8c00;
     border-radius: 16px;
-    padding: 40px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s;
+    padding: 35px;
+    margin-bottom: 35px;
+    box-shadow: 0 6px 25px rgba(255, 140, 0, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.hypothesis-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff8c00 0%, #ff6b00 100%);
 }
 
 .hypothesis-card:hover {
-    box-shadow: 0 8px 30px rgba(255, 140, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(255, 140, 0, 0.25);
+    border-color: #ff6b00;
 }
 
 .hypothesis-header {
