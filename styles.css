@@ -1398,7 +1398,36 @@ body {
     font-size: 14px;
 }
 
-/* Responsive */
+/* Responsive - Tablets and smaller */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .data-grid,
+    .teams-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .visualization-grid {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+}
+
+/* Responsive - Mobile and Tablets */
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
@@ -1558,5 +1587,208 @@ body {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+    }
+
+    .metrics-table-wrapper {
+        padding: 20px;
+    }
+
+    .metrics-table-container {
+        margin-bottom: 30px;
+    }
+
+    .breakdown-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .age-group-tags {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tag {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Responsive - Small Mobile */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .header-top {
+        padding: 10px 0;
+    }
+
+    .logo {
+        height: 30px;
+    }
+
+    .author {
+        font-size: 14px;
+    }
+
+    .header-title h1 {
+        font-size: 18px;
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .hypothesis-box {
+        padding: 20px;
+    }
+
+    .hypothesis-text {
+        font-size: 16px;
+    }
+
+    .hypothesis-conclusion {
+        font-size: 14px;
+    }
+
+    .data-grid,
+    .teams-grid,
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-card {
+        padding: 20px;
+    }
+
+    .visualization-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .visualization-item {
+        padding: 15px;
+    }
+
+    .hypothesis-card {
+        padding: 25px 20px;
+    }
+
+    .hypothesis-header h3 {
+        font-size: 18px;
+    }
+
+    .hypothesis-number {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .rice-value {
+        font-size: 24px;
+    }
+
+    .rice-formula {
+        font-size: 12px;
+    }
+
+    .roadmap-content {
+        padding: 15px;
+    }
+
+    .roadmap-header h3 {
+        font-size: 18px;
+    }
+
+    .roadmap-days {
+        font-size: 12px;
+        padding: 5px 12px;
+    }
+
+    .metrics-table-wrapper {
+        padding: 15px;
+    }
+
+    .metrics-table {
+        font-size: 11px;
+    }
+
+    .metrics-table th,
+    .metrics-table td {
+        padding: 8px 5px;
+    }
+
+    .metrics-table th {
+        font-size: 11px;
+    }
+
+    .tooltip-content {
+        width: calc(100vw - 20px);
+        max-width: 300px;
+        padding: 15px;
+    }
+
+    .question-icon {
+        width: 24px;
+        height: 24px;
+        font-size: 16px;
+    }
+
+    .nav-links {
+        gap: 10px;
+        font-size: 11px;
+    }
+
+    .btn-primary {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .btn-hero {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+}
+
+/* Responsive - Extra Small Mobile */
+@media (max-width: 320px) {
+    .hero-title {
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .hypothesis-header h3 {
+        font-size: 16px;
+    }
+
+    .metrics-table {
+        font-size: 10px;
+    }
+
+    .metrics-table th,
+    .metrics-table td {
+        padding: 6px 4px;
     }
 }
