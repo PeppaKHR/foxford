@@ -1,0 +1,26 @@
+name: Test FTP Connection and List Files
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Test FTP Connection (Dry Run)
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: pkhromova.online
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: /www/pkhromova.online/
+        local-dir: ./
+        protocol: ftp
+        port: 21
+        dry-run: true
+        log-level: verbose
+

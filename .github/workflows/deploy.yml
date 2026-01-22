@@ -15,6 +15,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
       
+    - name: List files to deploy
+      run: |
+        echo "Files to be deployed:"
+        find . -type f -not -path './.git/*' -not -path './.github/*' -not -path './*.docx' -not -path './DEPLOY.md' -not -path './ДИАГНОСТИКА_ДЕПЛОЯ.md' -not -path './НАСТРОЙКА_ДЕПЛОЯ.md' | head -20
+      
     - name: Deploy to FTP
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
@@ -27,6 +32,7 @@ jobs:
         port: 21
         dangerous-clean-slate: false
         dry-run: false
+        log-level: verbose
         exclude: |
           **/.git*
           **/.git*/**
@@ -36,4 +42,6 @@ jobs:
           **/*.docx
           **/.github/**
           **/DEPLOY.md
+          **/ДИАГНОСТИКА_ДЕПЛОЯ.md
+          **/НАСТРОЙКА_ДЕПЛОЯ.md
 
