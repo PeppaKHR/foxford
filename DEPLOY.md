@@ -18,7 +18,7 @@ git push -u origin main
 2. Нажмите "New repository secret"
 3. Добавьте два секрета:
    - **Имя:** `FTP_USERNAME` → **Значение:** `u3353778`
-   - **Имя:** `FTP_PASSWORD` → **Значение:** `Gjkbyf01!`
+   - **Имя:** `FTP_PASSWORD` → **Значение:** `Gjkbyf01!_`
 
 ### 3. После настройки
 
@@ -29,5 +29,5 @@ git push -u origin main
 - Сервер: pkhromova.online
 - Username: u3353778
 - Директория: /www/pkhromova.online/
-- Пароль: настроен через GitHub Secrets (Gjkbyf01!)
+- Пароль: настроен через GitHub Secrets (Gjkbyf01!_)
 
